@@ -1,5 +1,4 @@
 import XCTest
-import NOVAppReview
 
 class Tests: XCTestCase {
     

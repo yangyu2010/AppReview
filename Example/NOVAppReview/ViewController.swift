@@ -7,18 +7,27 @@
 //
 
 import UIKit
+import NOVAppReview
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        print("\n" + NSHomeDirectory() + "\n")
+     
     }
+    
+    @IBAction func action(_ sender: Any) {
+        NOVAppReview.shared.showReview()
+        
+//        UIApplication.shared.open(URL(string: "https://www.baidu.com")!)
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
+    
+  
+    @IBAction func reset(_ sender: Any) {
+        UserDefaults.standard.setValue(nil, forKey: "nov_app_review_info")
+    }
 }
 

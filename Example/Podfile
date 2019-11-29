@@ -1,11 +1,9 @@
+source 'https://gitlab.com/novapps/ios-app/framework/private-cocoapods-spec-repo.git'
+source 'https://cdn.cocoapods.org/'
+
 use_frameworks!
 
 target 'NOVAppReview_Example' do
   pod 'NOVAppReview', :path => '../'
 
-  target 'NOVAppReview_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end
