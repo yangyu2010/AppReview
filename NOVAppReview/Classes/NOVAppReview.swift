@@ -62,7 +62,10 @@ public class NOVAppReview: NSObject {
     
     @objc public static let shared = NOVAppReview()
 
+    /// 在didFinishLaunchingWithOptions调用不会显示, 如果想要启动时显示, 建议放在首页控制器viewDidLoad中
+    /// to-do 有些是点击某些按钮来触发评论 得立即调用
     @objc public func showReview() {
+        
         // 1.已经显示了直接返回
         guard reviewHadShow() == false else { return }
         
