@@ -91,12 +91,14 @@ public class NOVAppReview: NSObject {
         
         // 4.比对最大数 没有获取到或者不大于当前的(<=)就返回
         // to-do: 没有获取到最大数就是无限大?
-        guard let maxCount = info[Key.MaxCount] as? Int else { return }
+        guard let maxCountString = info[Key.MaxCount] as? String,
+            let maxCount = Int(maxCountString) else { return }
         let currentCount = getCurrentShowCount()
         guard currentCount < maxCount else { return }
         
         // 5.比对间隔数
-        guard let triggerCount = info[Key.TriggerCount] as? Int else { return }
+        guard let triggerCountString = info[Key.TriggerCount] as? String,
+            let triggerCount = Int(triggerCountString) else { return }
         let currentTriggerCount = getCurrentTriggerCount()
         if currentTriggerCount < triggerCount {
             // 0 1 2 3 --- 3
@@ -177,7 +179,8 @@ extension NOVAppReview {
         needCheckReviewResult = false
         
         var interval = 4.0
-        if let info_interval = reviewInfo[Key.TimeIntervalReview] as? Double {
+        if let info_interval_string = reviewInfo[Key.TimeIntervalReview] as? String,
+            let info_interval = Double(info_interval_string) {
             interval = info_interval
         }
         

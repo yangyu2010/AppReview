@@ -1,5 +1,5 @@
 {
-    "rate_button_enable": 1,
+    "rate_button_enable": true,
     "rate_max_show": 5,
     "rate_split_count": 3,
     "rate_app_store_url": "https://www.baidu.com",
