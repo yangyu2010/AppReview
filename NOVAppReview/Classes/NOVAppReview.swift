@@ -41,13 +41,13 @@ extension NOVAppReview {
 }
 
 
-public class NOVAppReview {
+public class NOVAppReview: NSObject {
     
     private var reviewInfo: [String: Any]!
     private var needCheckReviewResult = false
     private var timeGotoAppStore: TimeInterval = 0
     
-    private init() {
+    private override init() {
         
         if let info = UserDefaults.standard.object(forKey: Key.ReviewInfo) as? [String: Any] {
             reviewInfo = info
@@ -60,14 +60,18 @@ public class NOVAppReview {
         }
     }
     
-    public static let shared = NOVAppReview()
+    @objc public static let shared = NOVAppReview()
 
-    public func showReview() {
+    @objc public func showReview() {
         // 1.已经显示了直接返回
         guard reviewHadShow() == false else { return }
         
         // 2.获取网络配置文件
         NOVRemoteConfig.shared.setup()
+        
+        guard let info = NOVRemoteConfig.shared.configs else { return }
+
+        /**
         #if DEBUG
         let path = Bundle.main.path(forResource: "test", ofType: "json")!
         let url = URL(fileURLWithPath: path)
@@ -76,6 +80,7 @@ public class NOVAppReview {
         #else
         guard let info = NOVRemoteConfig.shared.configs else { return }
         #endif
+        */
         
         // 2.1 把间隔保存起来
         reviewInfo[Key.TimeIntervalReview] = info[Key.TimeIntervalReview]
@@ -158,7 +163,7 @@ extension NOVAppReview {
         timeGotoAppStore = Date().timeIntervalSince1970
         
         DispatchQueue.once(block: {
-            NotificationCenter.default.addObserver(forName: NSNotification.Name.UIApplicationDidBecomeActive, object: nil, queue: nil, using: { (_) in
+            NotificationCenter.default.addObserver(forName: UIApplication.didBecomeActiveNotification, object: nil, queue: nil, using: { (_) in
                 self.checkReviewResult()
             })
         })
@@ -186,7 +191,7 @@ extension NOVAppReview {
             // 发送通知给外界
             NotificationCenter.default.post(name: NSNotification.Name.init(NOVAppReviewNeedRewarded), object: nil)
             
-            NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+            NotificationCenter.default.removeObserver(self, name: UIApplication.didBecomeActiveNotification, object: nil)
         }
         
     }

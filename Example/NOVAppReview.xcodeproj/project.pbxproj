@@ -42,9 +42,21 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		68EFF269EECA5D96FD7BB9A2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		690D4AE644F88A530022A91F /* NOVAppReview.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = NOVAppReview.podspec; path = ../NOVAppReview.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		71F527AF18C3B809668FF44D /* Pods_NovAppReview_OC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NovAppReview_OC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8635B1B72390EFEF00DC4545 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		8690E60F23967A90000A501E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8690E61023967A90000A501E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8690E61523967A90000A501E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8690E61623967A90000A501E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8690E61923967A90000A501E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8690E61B23967A91000A501E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8690E61E23967A91000A501E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8690E62023967A91000A501E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8690E62123967A91000A501E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		88362F52310BB93312A71DAD /* Pods-NovAppReview-OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NovAppReview-OC.release.xcconfig"; path = "Target Support Files/Pods-NovAppReview-OC/Pods-NovAppReview-OC.release.xcconfig"; sourceTree = "<group>"; };
 		E2087E55C728D10DD595F964 /* Pods_NOVAppReview_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NOVAppReview_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEAE3428C978641DC57FAE18 /* Pods-NOVAppReview_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NOVAppReview_Example.release.xcconfig"; path = "Target Support Files/Pods-NOVAppReview_Example/Pods-NOVAppReview_Example.release.xcconfig"; sourceTree = "<group>"; };
+		FED96164361FF5C3F191548A /* Pods-NovAppReview-OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NovAppReview-OC.debug.xcconfig"; path = "Target Support Files/Pods-NovAppReview-OC/Pods-NovAppReview-OC.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				E2087E55C728D10DD595F964 /* Pods_NOVAppReview_Example.framework */,
+				71F527AF18C3B809668FF44D /* Pods_NovAppReview_OC.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -80,6 +93,7 @@
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for NOVAppReview */,
 				607FACE81AFB9204008FA782 /* Tests */,
+				8690E60E23967A90000A501E /* NovAppReview-OC */,
 				607FACD11AFB9204008FA782 /* Products */,
 				E567ADA1CEFF49AC90C5F014 /* Pods */,
 				0F8E71D4AEC3675B09B724DD /* Frameworks */,
@@ -145,11 +159,29 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		8690E60E23967A90000A501E /* NovAppReview-OC */ = {
+			isa = PBXGroup;
+			children = (
+				8690E60F23967A90000A501E /* AppDelegate.h */,
+				8690E61023967A90000A501E /* AppDelegate.m */,
+				8690E61523967A90000A501E /* ViewController.h */,
+				8690E61623967A90000A501E /* ViewController.m */,
+				8690E61823967A90000A501E /* Main.storyboard */,
+				8690E61B23967A91000A501E /* Assets.xcassets */,
+				8690E61D23967A91000A501E /* LaunchScreen.storyboard */,
+				8690E62023967A91000A501E /* Info.plist */,
+				8690E62123967A91000A501E /* main.m */,
+			);
+			path = "NovAppReview-OC";
+			sourceTree = "<group>";
+		};
 		E567ADA1CEFF49AC90C5F014 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				5AFC216595AA2E6FD880004A /* Pods-NOVAppReview_Example.debug.xcconfig */,
 				EEAE3428C978641DC57FAE18 /* Pods-NOVAppReview_Example.release.xcconfig */,
+				FED96164361FF5C3F191548A /* Pods-NovAppReview-OC.debug.xcconfig */,
+				88362F52310BB93312A71DAD /* Pods-NovAppReview-OC.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -352,6 +384,22 @@
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
+		8690E61823967A90000A501E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8690E61923967A90000A501E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8690E61D23967A91000A501E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8690E61E23967A91000A501E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -405,6 +453,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -450,6 +499,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

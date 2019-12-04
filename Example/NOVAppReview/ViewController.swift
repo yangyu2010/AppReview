@@ -16,6 +16,11 @@ class ViewController: UIViewController {
         
         print("\n" + NSHomeDirectory() + "\n")
      
+        NotificationCenter.default.addObserver(self, selector: #selector(actionReview), name: NSNotification.Name.init(NOVAppReviewNeedRewarded), object: nil)
+    }
+    
+    @objc func actionReview() {
+        print("奖励通知")
     }
     
     @IBAction func action(_ sender: Any) {

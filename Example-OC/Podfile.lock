@@ -1,4 +1,19 @@
 PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
   - Alamofire (4.9.1)
   - NOVAppReview (0.1.0):
     - NOVRemoteConfig
@@ -23,6 +38,7 @@ PODS:
     - NOVUtilities/Defines
 
 DEPENDENCIES:
+  - AFNetworking
   - NOVAppReview (from `../`)
 
 SPEC REPOS:
@@ -31,6 +47,7 @@ SPEC REPOS:
     - NOVUIKit
     - NOVUtilities
   trunk:
+    - AFNetworking
     - Alamofire
 
 EXTERNAL SOURCES:
@@ -38,12 +55,13 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   NOVAppReview: 1a4ca5f7f7972d87e682a66ff87e237866d36644
   NOVRemoteConfig: 7859939965ec128151bc43f05aa20080a8d143a4
   NOVUIKit: f6e9da182b80f7588dfec2f9737fc5a05a6d9ad4
   NOVUtilities: 96379fe71b6b17c07672a065e232185c53ed4b1f
 
-PODFILE CHECKSUM: 8e2504bb6dddeffc926b2356f05f1430356ce242
+PODFILE CHECKSUM: 3a1fec7eb0d0ab61306e7753363fe837f01f8cf5
 
 COCOAPODS: 1.8.4
